@@ -1,0 +1,11 @@
+### cmd for run whole projects
+pytest
+
+### cmd for run only 1 function
+pytest .\tests\test_sample.py::test_amazon_search
+
+### if the tag is there for the function as "@pytest.mark.amazon"
+pytest -k amazon  
+
+### cmd for run only 1 module
+pytest .\tests\test_sample.py 
