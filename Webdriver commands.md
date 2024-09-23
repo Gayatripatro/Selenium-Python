@@ -44,15 +44,16 @@
 
 
   ### Diference between text and get_attribute()
-  text -
+* text -
 
-  - always returns the inner text of the element
-  - Ex: <input id = '123 name='gayu'> EmailId: </input> ---> EmailId: is the inner text for this element
-  - Mostly links were having inner text
-  - If we dont have inner text for a locator and we are trying to get the text that time it will not return any value
+          - always returns the inner text of the element
+          - Ex: <input id = '123 name='gayu'> EmailId: </input> ---> EmailId: is the inner text for this element
+          - Mostly links were having inner text
+          - If we dont have inner text for a locator and we are trying to get the text that time it will not return any value
  
- get_attribute() - 
 
- - It will return any value of the web elements
- - If we dont have inner text for a locator and we need to get the text for that particular web element that time we can use get_attribute()
- - Synstx : element_name.get_attribute('value')  --> in value u can provide name/class name/id/value(innertext)
+* get_attribute() - 
+
+           - It will return any value of the web elements
+           - If we dont have inner text for a locator and we need to get the text for that particular web element that time we can use get_attribute()
+           - Synstx : element_name.get_attribute('value')  --> in value u can provide name/class name/id/value(innertext)
