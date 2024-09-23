@@ -26,6 +26,9 @@
 * refresh() - it will refresh the existing webpage
 
 **5) Wait Commands**
+* For fixing Synchronization problem we are using wait commands. (**Synchronization Problem** means sometime for loading the whole page it will take time so we need to intetionally hold our selenium scripts for sometime)
+* Implicit wait - 
+* Explicit wait - 
 
 
 ### Difference between FindElement() and FindElements()
