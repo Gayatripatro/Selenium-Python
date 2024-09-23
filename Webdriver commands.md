@@ -27,8 +27,22 @@
 
 **5) Wait Commands**
 * For fixing Synchronization problem we are using wait commands. (**Synchronization Problem** means sometime for loading the whole page it will take time so we need to intetionally hold our selenium scripts for sometime)
-* Implicit wait - 
-* Explicit wait - 
+* Implicit wait -
+
+              - It will apply for whole locators of the webpage
+              - Ex: driver.implicitly_wait(10)  -> if the element is available within 10 sec it proceed to execute further statements
+              - if the element is not available within the time then it will through exception
+     
+* Explicit wait -
+
+              - EX: from selenium.webdriver.support.wait import WebDriverWait
+                    from selenium.webdriver.support import expected_conditions as EC
+                    driver = webdriver.Chrome()
+                    mywait = WebDriverWait(driver,10) # explicit wait declaration
+              or    mywait = WebDriverWait(driver,10,ignored_exceptions=[NoSuchElementException,ElementNotVisibleExeception,ElementNotSelectableException])
+                    driver.get("app url")
+                    webelement Naame = mywait.until(EC.presence_of_element_lcated(By.XPATH,"//xpath")) # it will wait untill the location is not displayed. Once the element is available it will return the element
+                    webelement Naame.click()
 
 
 ### Difference between FindElement() and FindElements()
