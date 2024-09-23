@@ -39,7 +39,8 @@
                     from selenium.webdriver.support import expected_conditions as EC
                     driver = webdriver.Chrome()
                     mywait = WebDriverWait(driver,10) # explicit wait declaration
-              or    mywait = WebDriverWait(driver,10,ignored_exceptions=[NoSuchElementException,ElementNotVisibleExeception,ElementNotSelectableException])
+              or    mywait = WebDriverWait(driver,10,ignored_exceptions=[NoSuchElementException,ElementNotVisibleExeception,ElementNotSelectableException]) # it will handel the exeception also so that if the elemet not available then it will not through the exception and other lines will execute
+              or    mywait = WebDriverWait(driver,10,poll_frequency=2,ignored_exceptions=[NoSuchElementException,ElementNotVisibleExeception,ElementNotSelectableException]) # it will go and check every 2 sec that the element is available or not if available it will perorm the task
                     driver.get("app url")
                     webelement Naame = mywait.until(EC.presence_of_element_lcated(By.XPATH,"//xpath")) # it will wait untill the location is not displayed. Once the element is available it will return the element
                     webelement Naame.click()
